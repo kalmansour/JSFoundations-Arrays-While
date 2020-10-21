@@ -8,9 +8,14 @@
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
+
 function isArrayLengthOdd(a) {
-  // Your code here
+  const numberOfa = a.length;
+  if (numberOfa % 2 !== 0) { return true;
+  } else { return false;
+  }  
 }
+// console.log(isArrayLengthOdd([1, 2, 3]));
 
 /**
  * isArrayLengthEven(a):
@@ -22,9 +27,16 @@ function isArrayLengthOdd(a) {
  * isArrayLengthEven([1, 2, 3]) -> false
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
+// let a = [1, 2, 3, 4];
+// const numberOfa = a.length;
+
 function isArrayLengthEven(a) {
-  // Your code here
+  const numberOfa = a.length
+  if (numberOfa % 2 === 0) { return true;
+  } else { return false;
+  }  
 }
+// console.log(isArrayLengthOdd([1, 2, 3, 4]));
 
 /**
  * addLailaToArray(a):
@@ -35,8 +47,11 @@ function isArrayLengthEven(a) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(a) {
-  // Your code here
+  a.push("Laila");
+  console.log(a);
+  return a;
 }
+// console.log(addLailaToArray(["Mshary", "Hasan"]));
 
 /**
  * eliminateTeam(a):
@@ -47,8 +62,12 @@ function addLailaToArray(a) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(a) {
-  // Your code here
+  const lastElement = "Italy";
+  a.pop("Italy");
+  console.log(a);
+  return lastElement;
 }
+// console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
 
 /**
  * secondHalfOfArrayIfItIsEven(a):
@@ -61,8 +80,17 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(a) {
-  // Your code here
+  console.log(a);
+  if(a.length % 2 === 0){
+    return a.slice(a.length/2);
+  } else {
+    return [];
+  }
 }
+
+//console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+//console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "tomato"]));
+
 
 /**
  * youGottaCalmDown(s):
@@ -78,9 +106,15 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .slice()
  * - Use string method .endsWith()
  */
-function youGottaCalmDown(s) {
-  // Your code here
+
+function youGottaCalmDown(s){
+  while(s.endsWith('!!')){
+      s = s.slice(0,-1);
+  }
+  return s;
 }
+
+// console.log(youGottaCalmDown("Hi!!!!"));
 
 module.exports = {
   isArrayLengthOdd,
